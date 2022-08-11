@@ -23,7 +23,7 @@ const division = (...args) => {
       accumulator /= current;
       return trimDecimals(accumulator);
     } else {
-      return "no puedo dividir por 0";
+      return "No puedo dividir por 0";
     }
   });
 };
