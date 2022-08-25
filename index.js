@@ -52,9 +52,10 @@ const runCalculator = (initialMessage) => {
     initialMessage || "Bienvenido a la calculadora"
   }\nPor favor, introduce los números que desee calcular separados por espacio`;
 
-  const userInput = prompt(message);
+  const userInput = prompt(message).replace(/  +/g, " ");
+  const isInputEmpty = !userInput.replace(" ", "");
 
-  if (!userInput) {
+  if (!userInput || isInputEmpty) {
     return console.error("Ningún valor detectado. Terminando programa...");
   }
 
